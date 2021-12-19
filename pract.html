@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<div class="toppp">
-    <input type="button"  class="butto" value="dark"  onclick="faq()">
-    <input type="button"  class="butt" value="light"  onclick="aq()">
-</div>
+<input type="button"  class="buuu" value="dark"  onclick="taq()">
+
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <body >
 
@@ -32,6 +30,7 @@
 </div>
 </div>
     </div><br><br><br><br><br><br>
+
     <div class="container">
         <div class="animation-area">
             <ul class="body-area">
@@ -42,6 +41,7 @@
                 <li></li>
                 <li></li>
              </ul>
+            
         </div>
         
 
@@ -54,8 +54,7 @@
             --main-color:#f8cc39;
             --support:hsl(78, 79%, 49%);
             --back:linear-gradient(to  right,#efa2b4,#aef1ee);
-            --hidden:visible;
-            --visible:hidden;
+       
             
         }
         *{
@@ -87,7 +86,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+           
+        }
+        .dark-mode{
+            --back:linear-gradient(to  right,#ACA1A5,#6B515B);
+        --support: linear-gradient(to  right,#ACA1A5,#6B515B);
+        color: white;
+        --main-color:grey;
+        animation: all 0.4s ease;
+        
 
+        
         }
         .animation-area{
             height: 100%;
@@ -230,57 +239,8 @@
 ::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }
-.butto{
-    height: 35px;
-    width: 85px;
-    border: 1px black solid;
-    border-radius: 12px;
-    background-color: transparent;
-    color:black;
-    visibility: var(--hidden);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 23px;
 
-   
-}
 
-.butto:hover{
-    background-color:black ;
-    color: white;
-    transition: 0.2s;
-    
-
-    
-    
-}
-.butt{
-    height: 35px;
-    width: 85px;
-    border: 1px white solid;
-    border-radius: 12px;
-    background-color: transparent;
-    color:white;
-    visibility: var(--visible);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 23px;
-   
-}
-
-.butt:hover{
-    background-color:white;
-    color: black;
-    transition: 0.2s;
- 
-   
-}
-.toppp{
-    position:inherit;
-    border:3px white solid;
-    border-radius: 12px;
-    margin-left: 1100px;
-    display: flex;
-
-}
 #myBtn {
    
   position: fixed; 
@@ -295,10 +255,27 @@
   padding: 15px; 
   border-radius: 10px; 
   font-size: 18px;
+  transition: 0.4s;
 }
 
 #myBtn:hover {
   background-color: #555; 
+}
+.buuu{
+    background-color: transparent;
+    height: 35px;
+    width: 55px;
+    border-radius: 20px;
+    border: 2px black solid;
+    position: absolute;
+    right: 120px;
+    top: 43px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.buuu:hover{
+    background-color: black;
+    color: white;
+    transition: 0.4s ease;
 }
 
     
@@ -306,23 +283,19 @@
 
     </style>
     <script type="text/javascript">
-        function faq(){
-            document.documentElement.style.setProperty('--main-color', 'black');
-            document.documentElement.style.setProperty('--back', 'linear-gradient(to  right,#ACA1A5,#6B515B)');
-            document.documentElement.style.setProperty('--hidden', 'hidden');
-            document.documentElement.style.setProperty('--visible', 'visible');
-        }
-        function aq(){
-            document.documentElement.style.setProperty('--hidden','visible')
-            document.documentElement.style.setProperty('--visible', 'hidden');
-            document.documentElement.style.setProperty('--main-color', '#f8cc39');
-            document.documentElement.style.setProperty('--back', 'linear-gradient(to  right,#efa2b4,#aef1ee)');
-        }
+
         function topFunction() {
 
   document.documentElement.scrollTop = 0; 
+
+}
+
+function taq(){
+                      
+  
+   document.body.classList.toggle("dark-mode");
+
 }
 
     </script>
     
-
